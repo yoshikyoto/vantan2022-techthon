@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-&h#xpyi0-ebv8_f500zcn6%r(3$_^opb5bc0ly+0*)9i3u$64p
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     '160.248.7.67',
 ]
 
@@ -46,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -124,3 +125,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# URL の末尾にスラッシュを自動的につける機能を無効化
+APPEND_SLASH = False

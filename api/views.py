@@ -9,3 +9,10 @@ class CheckView(View):
             "method": "GET",
         }
         return JsonResponse(python_dict)
+
+    def post(self, request):
+        python_dict = {
+            "status_code": 200,
+            "method": "POST",
+        }
+        return JsonResponse(python_dict)
